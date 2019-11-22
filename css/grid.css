@@ -1,0 +1,139 @@
+/*
+I detta dokument styr jag webbplatsens layout. Skapar för en container som är uppdelad
+i 12st kolumner där varje kolumn tar upp 1/12 av utrymmet. Placerar sedan elementen i
+dessa kolumner/rader.
+*/
+.container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+}
+/*positionerar header (gröna bakgrunden)*/
+header{
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+/*positionerar loggan*/
+#logo{
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+/*positionerar hjälpmenyn*/
+#toppmeny{
+  grid-column: 10/-1;
+  grid-row: 1/2;
+  justify-items: end;
+}
+/*positionerar menyn*/
+#meny{
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  align-self: end;
+  justify-self: center;
+}
+/*positionerar section (gula innehållet)*/
+section{
+  grid-column: 2/12;
+  display: inherit;
+  grid-template-columns: inherit;
+}
+/*stylar brödtext och alla h1 rubriker, om inget annat anges*/
+h1{
+  grid-column: 2/12;
+  justify-self: center;
+}
+p{
+  grid-column: 2/12;
+  align-self: start;
+  justify-self: center;
+}
+/*Loggan på startsidan (den i section, inte i header)*/
+img{
+  grid-column: 1/-1;
+  justify-self: center;
+  }
+/*Varje övning har en bild på sin sida*/
+.ovningsbild{
+  grid-column: 1/-1;
+  justify-self: center;
+}
+/*På kategorisidan delar jag upp övningarna i 4 kolumner, se nedan*/
+.left{
+  grid-column: span 3;
+}
+.midleft{
+  grid-column: span 3;
+}
+.midright{
+  grid-column: span 3;
+}
+.right{
+  grid-column: span 3;
+}
+/*positionerar de två sections-rutorna*/
+.vad{
+  grid-column: 2/6;
+}
+.varför{
+  grid-column: 8/12;
+}
+/*positionerar citatet*/
+blockquote{
+  grid-column: 4/10;
+}
+/*positionerar bakåt-knappen*/
+.tillbaka{
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+}
+/*delar upp "om"-sidan i bild och text*/
+#omforfattare{
+  grid-column: 2/9;
+  }
+#forfattarbild{
+  grid-column: 10/12;
+}
+/*sprider ut footer att gå över hela */
+footer{
+  grid-column: 1/-1;
+}
+
+/* Påbörjat media querys
+@media only screen and (max-width: 800px){
+  .container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
+#meny{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    align-self: end;
+    justify-self: center;
+  }
+  .left{
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: inherit;
+    grid-auto-rows: inherit;
+  }
+  .midleft{
+    grid-column: 4/8;
+    display: grid;
+    grid-template-columns: inherit;
+    grid-auto-rows: inherit;
+  }
+  .midright{
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: inherit;
+    grid-auto-rows: inherit;
+  }
+  .right{
+    grid-column: 4/8;
+    display: grid;
+    grid-template-columns: inherit;
+    grid-auto-rows:inherit;
+  }
+}*/
