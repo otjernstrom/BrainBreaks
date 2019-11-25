@@ -1,0 +1,151 @@
+body{
+  min-width: 950px;
+  background-color: #EDEAE5;
+  color: #026670;
+  font-size: 1em;
+  font-family: "raleway", sans-serif;
+}
+header{
+  background-color: #9FEDD7;
+  color: #026670;
+}
+/*Stylar hjälpmenyn och dess länkar samt förändring av utseende när pekaren förs över*/
+#toppmeny{
+  margin: 0.5em;
+}
+#toppmeny a{
+  text-decoration: none;
+  color: #026670;
+  background-color: #FEF9C7;
+  border: solid 0.1em #FCE181;
+  padding: 0.2em;
+}
+#toppmeny a:hover{
+  background-color: #FCE181;
+  color: #026670;
+}
+/*Stylar huvudmenyn och dess länkar samt förändring av utseende när pekaren förs över.*/
+#meny{
+  font-size: 1.4em;
+  margin: 0.5em;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+}
+li a{
+  text-decoration: none;
+  color: #026670;
+  background-color: #FEF9C7;
+  border: solid 0.1em #FCE181;
+  padding: 0.2em;
+}
+li a:hover{
+  background-color: #FCE181;
+  color: #026670;
+}
+/*Markerar kategorin på den sidan användaren befinner sig på*/
+.active, #toppmeny a.active{
+  background-color: #FCE181;
+  color: #026670;
+}
+
+/*Stylar huvudinnehållet.*/
+section{
+  background-color: #FEF9C7;
+  color: #026670;
+  margin: 1em;
+}
+/*Styr rubrikens textstorlek på startsida & övriga sidor*/
+.rubrik{
+  font-size: 2.5em;
+}
+/*
+Följande 8st deklarationer stylar rutorna som innehåller brain breaks och ger dem
+egenskapen att border förtjockas när pekaren förs över rutan.
+*/
+.left{
+  margin: 1em;
+  border: solid 0.1em #FCE181;
+  padding: 0.2em;
+}
+.left:hover{
+  border: solid 0.2em #FCE181;
+}
+.midleft{
+  margin: 1em;
+  border: solid 0.1em #FCE181;
+  padding: 0.2em;
+}
+.midleft:hover{
+  border: solid 0.2em #FCE181;
+}
+.midright{
+  margin: 1em;
+  border: solid 0.1em #FCE181;
+  padding: 0.2em;
+}
+.midright:hover{
+  border: solid 0.2em #FCE181;
+}
+.right{
+  margin: 1em;
+  border: solid 0.1em #FCE181;
+  padding: 0.2em;
+}
+.right:hover{
+  border: solid 0.2em #FCE181;
+}
+/*stylar citat*/
+.citat{
+  border-left:1px solid #026670;
+  font-style: italic;
+  padding: 6px;
+}
+/*De länkar som är barn till <p> ska vara kursiva*/
+p > a{
+  font-style: italic;
+}
+/*Lagom inzoomning av bakgrundsbilden*/
+.bild{
+  background-size: cover;
+}
+/*Anpassar bildens storlek så alla blir lika stora*/
+.bild::before{
+  display:block;
+  content:"";
+  width:100%;
+  padding-top:56%;
+}
+/*Rama in innehåll*/
+.ruta{
+  border: solid 0.1em #FCE181;
+  padding: 3px;
+}
+/*styla tillbakaknapp/länk*/
+.tillbaka{
+  border: solid 0.1em #FCE181;
+  height: 30px;
+}
+/*styla bild som är på varje övningssida*/
+.ovningsbild{
+  width: 300px;
+}
+/*styla alla länkar som är barn till section */
+section > a{
+  text-decoration: none;
+  color: #026670;
+}
+/*ökar marinal på bild om mig*/
+#forfattarbild{
+  margin: 5%;
+}
+/*styla footer*/
+footer{
+  background-color: #9FEDD7;
+  color: #026670;
+}
